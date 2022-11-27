@@ -66,9 +66,9 @@
         android:layout_height="70dp"
         android:layout_marginTop="24dp"
         android:backgroundTint="#0ED6B9"
-        android:text="LOGIN"
-        android:textSize="26sp"
+        android:text="ĐĂNG NHẬP"
         android:textColor="#ffffff"
+        android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,21 +80,20 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="25dp"
-        android:text="Forgot password?"
+        android:text="Quên mật khẩu?"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
     <TextView
         android:id="@+id/tv_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register"
+        android:layout_marginLeft="80dp"
+        android:text="Đăng kí tài khoản"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:layout_marginLeft="80dp"
         app:layout_constraintStart_toEndOf="@+id/tv_forgetPass"
         app:layout_constraintTop_toTopOf="@+id/tv_forgetPass" />
 

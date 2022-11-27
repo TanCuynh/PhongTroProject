@@ -69,37 +69,37 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
 
         if(name.isEmpty())
         {
-            etName.setError("Full name is required!");
+            etName.setError("Bạn chưa nhập tên người dùng!");
             etName.requestFocus();
             return;
         }
         if(age.isEmpty())
         {
-            etAge.setError("Age is required!");
+            etAge.setError("Bạn chưa nhập tuổi!");
             etAge.requestFocus();
             return;
         }
         if(email.isEmpty())
         {
-            etEmail.setError("Email is required!");
+            etEmail.setError("Bạn chưa nhập email!");
             etEmail.requestFocus();
             return;
         }
         if(!Patterns.EMAIL_ADDRESS.matcher(email).matches())
         {
-            etEmail.setError("Please provide valid email!");
+            etEmail.setError("Xin hãy nhập email hợp lệ!");
             etEmail.requestFocus();
             return;
         }
         if(pass.isEmpty())
         {
-            etPass.setError("Password is required!");
+            etPass.setError("Bạn chưa nhập mật khẩu!");
             etPass.requestFocus();
             return;
         }
         if(pass.length() < 6)
         {
-            etPass.setError("Min password length should be at least 6 characters!");
+            etPass.setError("Mật khẩu phải chứa ít nhất 6 kí tự!");
             etPass.requestFocus();
             return;
         }
@@ -120,12 +120,12 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if(task.isSuccessful())
                                             {
-                                                Toast.makeText(RegisterUser.this, "User has been registered successfully!", Toast.LENGTH_LONG).show();
+                                                Toast.makeText(RegisterUser.this, "Đăng kí người dùng thành công!", Toast.LENGTH_LONG).show();
                                                 progressBar.setVisibility(View.GONE);
                                             }
                                             else
                                             {
-                                                Toast.makeText(RegisterUser.this, "Failed to register! Try again!", Toast.LENGTH_LONG).show();
+                                                Toast.makeText(RegisterUser.this, "Đăng kí người dùng không thành công. Xin hãy thử lại!", Toast.LENGTH_LONG).show();
                                                 progressBar.setVisibility(View.GONE);
                                             }
                                         }
@@ -133,7 +133,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                         }
                         else
                         {
-                            Toast.makeText(RegisterUser.this, "Failed to register!", Toast.LENGTH_LONG).show();
+                            Toast.makeText(RegisterUser.this, "Đăng kí người dùng không thành công!", Toast.LENGTH_LONG).show();
                             progressBar.setVisibility(View.GONE);
                         }
                     }
