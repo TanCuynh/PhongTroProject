@@ -75,27 +75,17 @@
         app:layout_constraintTop_toBottomOf="@+id/et_pass" />
 
     <TextView
-        android:id="@+id/tv_forgetPass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="25dp"
-        android:text="Quên mật khẩu?"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
-
-    <TextView
         android:id="@+id/tv_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="80dp"
-        android:text="Đăng kí tài khoản"
+        android:layout_marginTop="20dp"
+        android:text="Chưa có tài khoản? Đăng kí tại đây!"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/tv_forgetPass"
-        app:layout_constraintTop_toTopOf="@+id/tv_forgetPass" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
     <ProgressBar
         android:id="@+id/progressBar"
