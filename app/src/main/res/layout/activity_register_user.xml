@@ -48,12 +48,12 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_bannerDescription" />
 
     <EditText
-        android:id="@+id/et_age"
+        android:id="@+id/et_contact_number"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="Tuổi"
+        android:hint="SĐT"
         android:inputType="number"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,7 +71,7 @@
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_age" />
+        app:layout_constraintTop_toBottomOf="@+id/et_contact_number" />
 
     <EditText
         android:id="@+id/et_pass"

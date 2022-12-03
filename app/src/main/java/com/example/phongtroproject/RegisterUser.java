@@ -22,7 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class RegisterUser extends AppCompatActivity implements View.OnClickListener {
 
     private TextView banner, registerUser;
-    private EditText etName, etAge, etEmail, etPass;
+    private EditText etName, etPhone, etEmail, etPass;
     private ProgressBar progressBar;
 
     private FirebaseAuth mAuth;
@@ -41,7 +41,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         registerUser.setOnClickListener(this);
 
         etName = (EditText) findViewById(R.id.et_name);
-        etAge = (EditText) findViewById(R.id.et_age);
+        etPhone = (EditText) findViewById(R.id.et_contact_number);
         etEmail = (EditText) findViewById(R.id.et_email);
         etPass = (EditText) findViewById(R.id.et_pass);
 
@@ -65,7 +65,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         String email = etEmail.getText().toString().trim();
         String pass = etPass.getText().toString().trim();
         String name = etName.getText().toString().trim();
-        String age = etAge.getText().toString().trim();
+        String phone_number = etPhone.getText().toString().trim();
 
         if(name.isEmpty())
         {
@@ -73,10 +73,16 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
             etName.requestFocus();
             return;
         }
-        if(age.isEmpty())
+        if(phone_number.isEmpty())
         {
-            etAge.setError("Bạn chưa nhập tuổi!");
-            etAge.requestFocus();
+            etPhone.setError("Bạn chưa nhập số điện thoại!");
+            etPhone.requestFocus();
+            return;
+        }
+        if(phone_number.length() != 10)
+        {
+            etPhone.setError("Số điện thoại phải có 10 chữ số!");
+            etPhone.requestFocus();
             return;
         }
         if(email.isEmpty())
@@ -111,7 +117,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful())
                         {
-                            User user = new User(name, age, email);
+                            User user = new User(name, phone_number, email);
 
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())

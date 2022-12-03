@@ -61,10 +61,10 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_nameTitle" />
 
     <TextView
-        android:id="@+id/tv_ageTitle"
+        android:id="@+id/tv_phoneNumberTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tuổi: "
+        android:text="SĐT: "
         android:layout_marginTop="20dp"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -72,15 +72,15 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
     <TextView
-        android:id="@+id/tv_age"
+        android:id="@+id/tv_phone_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginLeft="30sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_ageTitle"
-        app:layout_constraintTop_toBottomOf="@+id/tv_ageTitle" />
+        app:layout_constraintStart_toStartOf="@+id/tv_phoneNumberTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_phoneNumberTitle" />
 
     <Button
         android:id="@+id/btn_logout"

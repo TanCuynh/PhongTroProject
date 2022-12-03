@@ -49,7 +49,7 @@ public class Profile extends AppCompatActivity {
         final TextView tv_Greeting = (TextView) findViewById(R.id.greeting);
         final TextView tv_Name = (TextView) findViewById(R.id.tv_name);
         final TextView tv_Email = (TextView) findViewById(R.id.tv_email);
-        final TextView tv_Age = (TextView) findViewById(R.id.tv_age);
+        final TextView tv_Phone_Number = (TextView) findViewById(R.id.tv_phone_number);
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -60,12 +60,12 @@ public class Profile extends AppCompatActivity {
                 {
                     String Name = userProfile.name;
                     String Email = userProfile.email;
-                    String Age = userProfile.age;
+                    String Age = userProfile.phone_number;
 
                     tv_Greeting.setText("Xin chào, " + Name + "!");
                     tv_Name.setText(Name);
                     tv_Email.setText(Email);
-                    tv_Age.setText(Age);
+                    tv_Phone_Number.setText(Age);
                 }
             }
 
