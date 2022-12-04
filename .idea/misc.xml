@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidFile/CKProject/PhongTroProject/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2925" />
+        <entry key="..\:/AndroidFile/CKProject/PhongTroProject/app/src/main/res/drawable/bg_search.xml" value="0.3015" />
+        <entry key="..\:/AndroidFile/CKProject/PhongTroProject/app/src/main/res/drawable/edittext_rounded.xml" value="0.3015" />
+        <entry key="..\:/AndroidFile/CKProject/PhongTroProject/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.308" />
+        <entry key="..\:/AndroidFile/CKProject/PhongTroProject/app/src/main/res/drawable/ic_baseline_rounded_corner_24.xml" value="0.3015" />
+        <entry key="..\:/AndroidFile/CKProject/PhongTroProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3015" />
+        <entry key="..\:/AndroidFile/CKProject/PhongTroProject/app/src/main/res/layout/activity_home_page.xml" value="0.31979166666666664" />
+        <entry key="..\:/AndroidFile/CKProject/PhongTroProject/app/src/main/res/layout/activity_main.xml" value="0.31979166666666664" />
+        <entry key="..\:/AndroidFile/CKProject/PhongTroProject/app/src/main/res/layout/activity_post_for_rent.xml" value="0.31979166666666664" />
+        <entry key="..\:/AndroidFile/CKProject/PhongTroProject/app/src/main/res/layout/activity_profile.xml" value="0.31979166666666664" />
+        <entry key="..\:/AndroidFile/CKProject/PhongTroProject/app/src/main/res/layout/activity_register_user.xml" value="0.31979166666666664" />
+        <entry key="..\:/AndroidFile/CKProject/PhongTroProject/app/src/main/res/layout/activity_user_fragment.xml" value="0.31979166666666664" />
+        <entry key="..\:/AndroidFile/CKProject/PhongTroProject/app/src/main/res/layout/fragment_add_post.xml" value="0.31979166666666664" />
+        <entry key="..\:/AndroidFile/CKProject/PhongTroProject/app/src/main/res/layout/fragment_blank.xml" value="0.30572916666666666" />
+        <entry key="..\:/AndroidFile/CKProject/PhongTroProject/app/src/main/res/layout/fragment_blank2.xml" value="0.31979166666666664" />
+        <entry key="..\:/AndroidFile/CKProject/PhongTroProject/app/src/main/res/layout/fragment_home.xml" value="0.31979166666666664" />
+        <entry key="..\:/AndroidFile/CKProject/PhongTroProject/app/src/main/res/layout/fragment_user.xml" value="0.30572916666666666" />
+        <entry key="..\:/AndroidFile/CKProject/PhongTroProject/app/src/main/res/layout/row_users.xml" value="0.31979166666666664" />
+        <entry key="..\:/AndroidFile/CKProject/PhongTroProject/app/src/main/res/menu/menu_nav.xml" value="0.31979166666666664" />
+        <entry key="..\:/AndroidFile/CKProject/PhongTroProject/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2925" />
+        <entry key="..\:/AndroidFile/CKProject/PhongTroProject/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2925" />
+      </map>
+    </option>
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
