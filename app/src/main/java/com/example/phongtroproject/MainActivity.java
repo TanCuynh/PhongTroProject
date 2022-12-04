@@ -100,6 +100,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 else
                 {
                     Toast.makeText(MainActivity.this, "Đăng nhập thất bại! Xin hãy kiểm tra lại email và mật khẩu!", Toast.LENGTH_LONG).show();
+                    progressBar.setVisibility(View.GONE);
                 }
             }
         });

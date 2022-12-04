@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,7 +24,7 @@ public class Profile extends AppCompatActivity {
 
     private String userID;
 
-    private Button logout;
+    private TextView editProfile, back;
 
 
     @Override
@@ -33,12 +32,19 @@ public class Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        logout = (Button) findViewById(R.id.btn_logout);
-        logout.setOnClickListener(new View.OnClickListener() {
+        editProfile = (TextView) findViewById(R.id.tv_edit_profile);
+        editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(Profile.this, MainActivity.class));
+                startActivity(new Intent(Profile.this, EditProfile.class));
+            }
+        });
+
+        back = (TextView) findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Profile.this, HomePage.class));
             }
         });
 
@@ -46,7 +52,6 @@ public class Profile extends AppCompatActivity {
         reference = FirebaseDatabase.getInstance().getReference("Users");
         userID = user.getUid();
 
-        final TextView tv_Greeting = (TextView) findViewById(R.id.greeting);
         final TextView tv_Name = (TextView) findViewById(R.id.tv_name);
         final TextView tv_Email = (TextView) findViewById(R.id.tv_email);
         final TextView tv_Phone_Number = (TextView) findViewById(R.id.tv_phone_number);
@@ -60,12 +65,11 @@ public class Profile extends AppCompatActivity {
                 {
                     String Name = userProfile.name;
                     String Email = userProfile.email;
-                    String Age = userProfile.phone_number;
+                    String Phone = userProfile.phone_number;
 
-                    tv_Greeting.setText("Xin chào, " + Name + "!");
                     tv_Name.setText(Name);
                     tv_Email.setText(Email);
-                    tv_Phone_Number.setText(Age);
+                    tv_Phone_Number.setText(Phone);
                 }
             }
 
