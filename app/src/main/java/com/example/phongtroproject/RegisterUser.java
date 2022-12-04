@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -149,6 +150,12 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                             Toast.makeText(RegisterUser.this, "Đăng kí người dùng không thành công!", Toast.LENGTH_LONG).show();
                             progressBar.setVisibility(View.GONE);
                         }
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        progressBar.setVisibility(View.GONE);
+                        Toast.makeText(RegisterUser.this, ""+e.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 });
 
